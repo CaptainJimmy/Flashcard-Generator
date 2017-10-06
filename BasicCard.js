@@ -12,40 +12,43 @@ var fs = require('fs');
 
 //grab the card from the text file.
 
-var card={
-"first": {
-	"front": "Who was the first president of the United States?",
-	"back": "George Washington",
-	"cloze": {
-	         "partial": "... was the first president of the United States.",
-	         "fullText": "George Washington was the first president of the United States."
+var card={ first: {
+	front: "Who was the first president of the United States?",
+	back: "George Washington",
+	cloze: {
+	         partial: "... was the first president of the United States.",
+	         fulltext: "George Washington was the first president of the United States."
 	         }
 	},
-"second": {
-	"front": "Who was the second president of the United States?",
-	"back": "John Adams",
-	"cloze": {
-	         "partial": "... was the second president of the United States.",
-	         "fullText": "John Adams was the second president of the United States."
+second: {
+	front: "Who was the second president of the United States?",
+	back: "John Adams",
+	cloze: {
+	         partial: "... was the second president of the United States.",
+	         fulltext: "John Adams was the second president of the United States."
 	         }
 	}
-	
-}		
+}	
 
 
-var BasicCard = function(president,modifier){
-		var pres=this.president;
-			var mod=this.modifier;
-	this.GetCard = function(president,modifier) {
-		var pres=this.president;
-			var mod=this.modifier;
-			console.log(pres);
+
+var BasicCard = function(president,mod){
+  this.president=president;
+  this.mod=mod;
+  console.log(card.president);
+	this.GetCard = function() {
+
+
+			console.log(president);
 			console.log(mod);
-			//console.log("HERER FOO"+president+" "+modifier)
-			console.log(card);
+			//console.log(card);
+						//console.log(card.first.front);
+ 		
+		//	console.log(card.president.mod);
+		//	console.log(card.first.front);
 
 		}
-	this.Cloze = function(president,modifier){
+	this.Cloze = function(){
 			//onsole.log("HERER FOO"+president+" "+modifier)
 			console.log(card);
 
