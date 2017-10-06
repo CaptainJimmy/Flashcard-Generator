@@ -1,9 +1,12 @@
-var BasicCard = require("./BasicCard");
+var BasicCard = require("./BasicCard.js");
 
-var newCard = new BasicCard();
+// var newCard = new BasicCard();
+ var newCard = new BasicCard;
+
 
 var ClozeCard = function(president,modifier){
-	console.log("ClozeCard " + president + modifier);
-	return newCard.Cloze(president,modifier);
+	//console.log("ClozeCard " + president + modifier);
+	 console.log(newCard.Cloze(president,modifier));
 }
 
+module.exports = ClozeCard;
