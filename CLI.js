@@ -4,24 +4,24 @@ var president = process.argv[2].toLowerCase();
 var cardType = process.argv[3].toLowerCase();
 var cardModifier = process.argv[4].toLowerCase();
 
-var myBasicCard = new BasicCard();
-var myClozeCard = new ClozeCard();
+// var myBasicCard = new BasicCard();
+// var myClozeCard = new ClozeCard();
 
 //console.log(BasicCard);
 //console.log(myBasicCard);
 
 if (cardType === "basic") {
-	console.log("basic");
 	if (cardModifier === "front" || cardModifier ==="back"){
-		console.log(cardType +" 1 "+cardModifier);
+		console.log(cardType +" basic "+cardModifier);
+		var myBasicCard = new BasicCard();
 		myBasicCard.GetCard(president,cardModifier);
 	}
 	else {console.log("Requires front or back modifier")}
 }
 else if (cardType==="cloze") {
-		console.log("cloze");
 		if (cardModifier ==="partial" || cardModifier === "full") {
-		    console.log(cardType +" 2 " + cardModifier);
+		    console.log(cardType +" cloze " + cardModifier);
+		    var myClozeCard = new ClozeCard();
 			myClozeCard(president,cardModifier);
 		}
 		else {console.log("Requires partial or full modifier")}
