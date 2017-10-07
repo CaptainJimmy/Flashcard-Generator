@@ -17,7 +17,7 @@ var card={ first: {
 	back: "George Washington",
 	cloze: {
 	         partial: "... was the first president of the United States.",
-	         fulltext: "George Washington was the first president of the United States."
+	         full: "George Washington was the first president of the United States."
 	         }
 	},
 second: {
@@ -25,7 +25,7 @@ second: {
 	back: "John Adams",
 	cloze: {
 	         partial: "... was the second president of the United States.",
-	         fulltext: "John Adams was the second president of the United States."
+	         full: "John Adams was the second president of the United States."
 	         }
 	}
 }
@@ -35,29 +35,18 @@ second: {
 var BasicCard = function(president,mod){
   this.president=president;
   this.mod=mod;
-console.log(president);
-console.log(mod);
-console.log(card);
-	//console.log(card.[president]);
+
+
 	this.GetCard = function() {
 
-
-			console.log(president);
-			console.log(mod);
-			//console.log(card);
-						//console.log(card.first.front);
-
-		//	console.log(card.president.mod);
-		//	console.log(card.first.front);
+			console.log(card[president][mod]);
 
 		}
 	this.Cloze = function(){
-			//onsole.log("HERER FOO"+president+" "+modifier)
-			console.log(card);
+			console.log("getting to this.cloze");
+			console.log(card[president]);
 
-//console.log("here"); console.log(card);
-		 //return card.president.cloze.modifier;
-		}
+		};
 	}
 
 module.exports = BasicCard;
