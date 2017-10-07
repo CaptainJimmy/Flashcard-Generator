@@ -21,10 +21,10 @@ if (cardType === "basic") {
 else if (cardType==="cloze") {
 		if (cardModifier ==="partial" || cardModifier === "full") {
 		    console.log("vars from CLI.js"+cardType +" " + cardModifier);
-		    var myClozeCard = new ClozeCard(president,cardModifier);
-			myClozeCard();
+		    //var myClozeCard = new ClozeCard(president,cardModifier);
+			//myClozeCard();
+			ClozeCard(president,cardModifier);
 		}
 		else {console.log("Requires partial or full modifier")}
 }
 else {console.log("Syntax Error. Requires arguments.  Example: '$ node CLI.js basic front' or '$ node CLI.js cloze partial'")};
-

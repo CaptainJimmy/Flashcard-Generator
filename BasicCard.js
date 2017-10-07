@@ -12,7 +12,7 @@ var fs = require('fs');
 
 //grab the card from the text file.
 
-var card=[ {first: {
+var card= {first: {
 	front: "Who was the first president of the United States?",
 	back: "George Washington",
 	cloze: {
@@ -28,7 +28,7 @@ second: {
 	         full: "John Adams was the second president of the United States."
 	         }
 	}
-}]
+};
 
 
 
@@ -43,8 +43,10 @@ var BasicCard = function(president,mod){
 
 		}
 	this.Cloze = function(){
-			console.log("getting to this.cloze");
-			console.log(card[president]);
+	//	console.log(this.mod);
+	//	console.log(this.president);
+		//	console.log("getting to this cloze");
+			console.log(card[president].cloze[mod]);
 
 		};
 	}
