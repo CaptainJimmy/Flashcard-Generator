@@ -28,14 +28,17 @@ second: {
 	         fulltext: "John Adams was the second president of the United States."
 	         }
 	}
-}	
+}
 
 
 
 var BasicCard = function(president,mod){
   this.president=president;
   this.mod=mod;
-  console.log(card.president);
+console.log(president);
+console.log(mod);
+console.log(card);
+	//console.log(card.[president]);
 	this.GetCard = function() {
 
 
@@ -43,7 +46,7 @@ var BasicCard = function(president,mod){
 			console.log(mod);
 			//console.log(card);
 						//console.log(card.first.front);
- 		
+
 		//	console.log(card.president.mod);
 		//	console.log(card.first.front);
 
